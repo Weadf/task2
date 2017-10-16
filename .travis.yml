@@ -1,6 +1,6 @@
 services:
   - postgresql
 before_script:
-     - psql -c "CREATE DATABASE myapp;" -U myapp
-    - psql -c "CREATE USER foo WITH PASSWORD 'myapp';" -U myapp
+  - psql -c 'create database myapp;' -U myapp -P myapp
+  - psql -c 'CREATE USER foo WITH PASSWORD 'myapp';' -U myapp
 language: java
