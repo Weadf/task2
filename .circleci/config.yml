@@ -19,7 +19,7 @@ jobs:
 # Add a password to the `ubuntu` user, since Postgres is configured to
 # always ask for a password without sudo, and fails without one.
     command: sudo -u postgres psql -p 5432 -c "create user myapp with password  'dbpass';”
-   command: sudo -u  postgres psql -p 5432 -c "grant all privileges on database myapp to myapp;"
+   #command: sudo -u  postgres psql -p 5432 -c "grant all privileges on database myapp to myapp;"
    # command: sudo -u postgres psql -p 5433 -c "alter user myapp with superuser;"
 
 # Create a new test database.
