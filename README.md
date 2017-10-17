@@ -1,15 +1,15 @@
 # task2
 
-# Start up the virtual machine:
+ Start up the virtual machine:
 $ vagrant up
 
-# Stop the virtual machine:
+ Stop the virtual machine:
 $ vagrant halt
 
-#Service is available
+Service is available:
 localhost:8081
 
-#Postgresq
+Postgresq:
 localhost:5432
   Database: myapp
   Username: myapp
