@@ -98,7 +98,7 @@ date > "$PROVISIONED_ON"
 
 echo "Successfully created PostgreSQL dev virtual machine."
 echo ""
-print_db_usage
+
 sudo apt-get update
 
 echo "Installing Git.."
@@ -117,5 +117,5 @@ sudo apt-get install -y
 cd /
 cd /mnt/bootstrap
 mvn clean install
-
+print_db_usage
 

@@ -8,6 +8,11 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
 	config.vm.box = "ubuntu/trusty32"
+
+config.vm.provider :virtualbox do |vb| 
+#vb.gui = true 
+vb.customize ["modifyvm",    :id, "--nictype1", "virtio"]
+end
   config.vm.provision "shell", inline: $script
   config.vm.boot_timeout = 600
 end

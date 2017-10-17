@@ -2,7 +2,7 @@
 
 echo "START"
 
-file="/mnt/bootstrap/target/gs-rest-service-0.1.0.jar"
+file="/mnt/bootstrap/target/task-rest-service-0.1.0.jar"
 
 if [ -f "$file" ]
 then
