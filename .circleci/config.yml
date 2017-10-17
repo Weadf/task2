@@ -13,24 +13,11 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       - image: circleci/postgres:9.4
+              environment:
+               POSTGRES_USER: myapp
+               POSTGRES_DB: myapp
+               POSTGRES_PASSWORD: "dbpass"
 
-    steps:
-
-    database:
-      override:
-      # Delete lines like these below. Yours won't be the same, but we had to do something
-      # like this to get connected to 9.5 before it became default due to our database
-      # setup.
-      # - sudo -u postgres dropuser -p $DBPORT $USER
-      - sudo -u postgres createuser -p 5432 myapp
-      - sudo -u postgres createdb -p 5432 -O myapp myapp
-      - sudo -u postgres psql -p 5432 --command="ALTER USER myapp superuser"
-   #     - run:
-# Add a password to the `ubuntu` user, since Postgres is configured to
-# always ask for a password without sudo, and fails without one.
-
-
-   # command: sudo -u postgres psql -p 5432 -c "create user myapp with password  'dbpass';”
 
 
 
